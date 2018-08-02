@@ -28,6 +28,7 @@
 ## References
 
 - [bootstrap/scss](https://github.com/twbs/bootstrap/tree/v4-dev/scss)
+- [Sass 강좌 – 한 눈에 보기](https://velopert.com/1712)
 - [CSS Preprocessors. Comparing SASS, LESS and Stylus](https://www.slideshare.net/patricka1/css-preprocessors-sass-less-and-stylus)
 - [Sass vs. LESS vs. Stylus: Preprocessor Shootout](https://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320)
 - [Less vs Sass vs Stylus](https://blog.scottlogic.com/2013/03/08/less-vs-sass-vs-stylus.html)
