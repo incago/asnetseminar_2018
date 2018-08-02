@@ -1,0 +1,150 @@
+// 이 주석은 CSS파일에서 보일까요?
+/* 이 주석은 보일까요? */
+/* 여러줄은 이렇게 입력하면 되겠네요
+   이렇게
+   요렇게
+*/
+
+// 임포트
+@import "_reset";
+
+// 변수
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+/* 주석안에서도 변수를 사용할수 있답니다. $font-stack 변수에 정의한 폰트는 #{$font-stack} 입니다. */
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+// 네스팅(중첩)
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    // &를 이용하여 부모(a)를 선택합니다
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+#main {
+  color: black;
+  // &로 부모이름을 사용하여 클래스명에 변수로 사용합니다
+  &-sidebar {
+    border: 1px solid;
+  }
+}
+
+// 믹스인(mixins)
+@mixin transform($property) {
+  -webkit-transform: $property;
+  transform: $property;
+}
+
+.box {
+  @include transform(rotate(30deg));
+}
+
+// 확장/상속(extend/inheritance)
+// %equal-heights은 확장/상속된적이 없기 때문에 CSS파일에 나타나지 않는다
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// %message-shared은 확장/상속되었기 때문에 CSS파일에 나타난다
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+// 연산자
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+
+// 색은 어떻게 더해질까요?
+.colorplus {
+  background-color: #111 + #222;
+  color: #666 + #777; //6+7 = 13(10진수) = d(16진수)
+}
+
+// 전역변수선언
+#main {
+  $width: 5em !global; //전역변수로 선언합니다
+  width: $width;
+}
+
+#sidebar {
+  width: $width; //여기서 사용이 가능해집니다
+}
+
+// 변수명과 하이픈/언더스코어
+$incago_height: 177px; //변수명에 언더바를 넣었습니다
+
+.incago_a {
+  height: $incago_height; //이렇게 사용하죠
+}
+.incago_b {
+  height: $incago-height; //언더바대신 하이픈을 넣어도 사용이 가능합니다. 반대도 가능.
+}
+
+// 믹스인, @content
+// https://robots.thoughtbot.com/sasss-content-directive
+
+// @mixin media($queryString) {
+//   @media #{$queryString} {
+//     @content;
+//   }
+// }
+
+// .container {
+//   width: 900px;
+//   @include media("(max-width: 767px)") {
+//     width: 100%;
+//   }
+// }

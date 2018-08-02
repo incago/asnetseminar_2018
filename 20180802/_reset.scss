@@ -1,0 +1,8 @@
+//파일 이름이 _(언더바)로 시작되기 때문에 css파일을 생성하지 않는다.
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
