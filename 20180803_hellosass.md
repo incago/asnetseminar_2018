@@ -19,7 +19,7 @@
   - 두가지 문법이 있다
     - 원하는 문법을 선택할 수 있다
 
-![google trend](./20180802/googletrend.png)
+![google trend](./20180803/googletrend.png)
 
 ## 환경설정
 
