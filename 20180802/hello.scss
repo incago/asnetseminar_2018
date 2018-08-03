@@ -148,3 +148,41 @@ $incago_height: 177px; //변수명에 언더바를 넣었습니다
 //     width: 100%;
 //   }
 // }
+
+/* first try */
+/*
+@mixin button($color: #000, $border: none) {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: $color;
+  border: $border;
+}
+.button-alert {
+  @include button(#f00);
+}
+.button-cancel {
+  @include button(#000, solid 1px #999);
+}
+*/
+
+/* second try */
+/*
+@mixin button() {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  @content;
+}
+
+.button-alert {
+  @include button {
+    color: #f00;
+  }
+}
+.button-cancel {
+  @include button {
+    border: solid 1px #999;
+  }
+}
+*/

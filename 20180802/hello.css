@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* 이 주석은 보일까요? */
+/* 여러줄은 이렇게 입력하면 되겠네요
+   이렇게
+   요렇게
+*/
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 주석안에서도 변수를 사용할수 있답니다. $font-stack 변수에 정의한 폰트는 Helvetica, sans-serif 입니다. */
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#main {
+  color: black;
+}
+
+#main-sidebar {
+  border: 1px solid;
+}
+
+.box {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%;
+}
+
+.colorplus {
+  background-color: #333333;
+  color: #dddddd;
+}
+
+#main {
+  width: 5em;
+}
+
+#sidebar {
+  width: 5em;
+}
+
+.incago_a {
+  height: 177px;
+}
+
+.incago_b {
+  height: 177px;
+}
+
+/* first try */
+/*
+@mixin button($color: #000, $border: none) {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: $color;
+  border: $border;
+}
+.button-alert {
+  @include button(#f00);
+}
+.button-cancel {
+  @include button(#000, solid 1px #999);
+}
+*/
+/* second try */
+/*
+@mixin button() {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  @content;
+}
+
+.button-alert {
+  @include button {
+    color: #f00;
+  }
+}
+.button-cancel {
+  @include button {
+    border: solid 1px #999;
+  }
+}
+*/
+/*# sourceMappingURL=hello.css.map */

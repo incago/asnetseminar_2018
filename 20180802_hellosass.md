@@ -21,12 +21,20 @@
 
 ![google trend](./20180802/googletrend.png)
 
+## 환경설정
+
+- [Install Sass](https://sass-lang.com/install)
+- VSCode extension
+  - Sass
+  - Live Sass Compiler
+
 ## 샘플코드와 함께 Sass 알아보기
 
 - hello.scss
 
 ## References
 
+- [Sass Guidelines](https://sass-guidelin.es/ko/)
 - [bootstrap/scss](https://github.com/twbs/bootstrap/tree/v4-dev/scss)
 - [Sass 강좌 – 한 눈에 보기](https://velopert.com/1712)
 - [CSS Preprocessors. Comparing SASS, LESS and Stylus](https://www.slideshare.net/patricka1/css-preprocessors-sass-less-and-stylus)
