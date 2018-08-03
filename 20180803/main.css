@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /* 이 주석은 보일까요? */
-/* 여러줄은 이렇게 입력하면 되겠네요
-   이렇게
-*/
+/* 이것은 주석 */
+/* 여러줄은 이렇게 입력하면 되겠네 */
 html,
 body,
 ul,
@@ -11,10 +10,16 @@ ol {
   padding: 0;
 }
 
+.incago-btn {
+  background-color: #ccc;
+  color: #000000;
+  border: 1px solid blue;
+}
+
 /* 주석안에서도 변수를 사용할수 있답니다. $font-stack 변수에 정의한 폰트는 Helvetica, sans-serif 입니다. */
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333;
+  color: #111;
 }
 
 nav ul {
@@ -84,7 +89,7 @@ aside[role="complementary"] {
 
 .colorplus {
   background-color: #333333;
-  color: #dddddd;
+  color: black;
 }
 
 #main {
@@ -96,11 +101,21 @@ aside[role="complementary"] {
 }
 
 .incago_a {
-  height: 177px;
+  height: 100px;
 }
 
 .incago_b {
-  height: 177px;
+  height: 100px;
+}
+
+.container {
+  width: 900px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* first try */
@@ -129,14 +144,12 @@ aside[role="complementary"] {
 }
 
 .button-alert {
-  @include button {
-    color: #f00;
-  }
+  color: #f00;
+  @include button;
 }
 .button-cancel {
-  @include button {
-    border: solid 1px #999;
-  }
+  border: solid 1px #999;
+  @include button;
 }
 */
 /*# sourceMappingURL=main.css.map */

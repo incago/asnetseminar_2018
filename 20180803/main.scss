@@ -1,15 +1,18 @@
+@charset 'utf-8';
+
 // 이 주석은 CSS파일에서 보일까요?
+// 한줄짜리 주석
 /* 이 주석은 보일까요? */
-/* 여러줄은 이렇게 입력하면 되겠네요
-   이렇게
-*/
+/* 이것은 주석 */
+/* 여러줄은 이렇게 입력하면 되겠네 */
 
 // 임포트
 @import "_reset";
+@import "_button";
 
 // 변수
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #111;
 
 /* 주석안에서도 변수를 사용할수 있답니다. $font-stack 변수에 정의한 폰트는 #{$font-stack} 입니다. */
 
@@ -40,6 +43,7 @@ nav {
     }
   }
 }
+
 #main {
   color: black;
   // &로 부모이름을 사용하여 클래스명에 변수로 사용합니다
@@ -109,7 +113,7 @@ aside[role="complementary"] {
 // 색은 어떻게 더해질까요?
 .colorplus {
   background-color: #111 + #222;
-  color: #666 + #777; //6+7 = 13(10진수) = d(16진수)
+  color: #666 - #777;
 }
 
 // 전역변수선언
@@ -123,7 +127,7 @@ aside[role="complementary"] {
 }
 
 // 변수명과 하이픈/언더스코어
-$incago_height: 177px; //변수명에 언더바를 넣었습니다
+$incago-height: 100px; //변수명에 언더바를 넣었습니다
 
 .incago_a {
   height: $incago_height; //이렇게 사용하죠
@@ -135,18 +139,18 @@ $incago_height: 177px; //변수명에 언더바를 넣었습니다
 // 믹스인, @content
 // https://robots.thoughtbot.com/sasss-content-directive
 
-// @mixin media($queryString) {
-//   @media #{$queryString} {
-//     @content;
-//   }
-// }
+@mixin media($queryString) {
+  @media #{$queryString} {
+    @content;
+  }
+}
 
-// .container {
-//   width: 900px;
-//   @include media("(max-width: 767px)") {
-//     width: 100%;
-//   }
-// }
+.container {
+  width: 900px;
+  @include media("(max-width: 767px)") {
+    width: 100%;
+  }
+}
 
 /* first try */
 /*
@@ -175,13 +179,11 @@ $incago_height: 177px; //변수명에 언더바를 넣었습니다
 }
 
 .button-alert {
-  @include button {
-    color: #f00;
-  }
+  color: #f00;
+  @include button;
 }
 .button-cancel {
-  @include button {
-    border: solid 1px #999;
-  }
+  border: solid 1px #999;
+  @include button;
 }
 */
