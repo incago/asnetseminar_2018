@@ -35,6 +35,14 @@
 ## 사용해보자
 
 - [Develop a Serverless Backend using Node.js on AWS Lambda](https://egghead.io/courses/develop-a-serverless-backend-using-node-js-on-aws-lambda)
+  - AWS User 생성, AWS CLI 설치
+    - 절대 키를 외부에 노출하지 말것, 코드에 포함시켜 깃험에 공개하는 참사가 일어나지 않도록 신경써야함
+  - Serverless Framework 설치하기
+  - Node.js 한수 디플로이하기
+  - HTTP endpoit 람다함수에 붙이기
+  - DynamoDB 테이블 디플로이하기
+  - DynamoDB 에 데이터를 저장하기 위한 람다함수 디플로이하기
+  - DynamoDB 에서 데이터를 조회하기 위한 람다함수 디플로이하기
 
 ## References
 
