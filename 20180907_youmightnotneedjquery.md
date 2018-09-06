@@ -4,9 +4,9 @@
 - [GitHub Removes jQuery. Why?](https://www.i-programmer.info/news/167-javascript/12017-github-removes-jquery-why.html)
 - [Vanilla JS](http://vanilla-js.com/)
 - [You Don't Need jQuery](https://github.com/nefe/You-Dont-Need-jQuery/blob/master/README.ko-KR.md)
-- [YOU MIGHT NOT NEED JQUERY](http://youmightnotneedjquery.com/)
-- [\*이제와서 JQUERY 를 쓰면 안되는 이유, 혹은 JQUERY 와 웹개발의 역사](https://www.tokyobranch.net/archives/6598)
-- [\*이제와서 JQUERY 를 쓰면 안되는 이유 PART 2](https://www.tokyobranch.net/archives/7463)
+- [YOU MIGHT NOT NEED jQuery](http://youmightnotneedjquery.com/)
+- [\*이제와서 jQuery 를 쓰면 안되는 이유, 혹은 jQuery 와 웹개발의 역사](https://www.tokyobranch.net/archives/6598)
+- [\*이제와서 jQuery 를 쓰면 안되는 이유 PART 2](https://www.tokyobranch.net/archives/7463)
 - [jQuery 더이상 쓰지 않아야하는가?](http://mygumi.tistory.com/204)
 - [Virtual DOM 이란 무엇인가?](http://mygumi.tistory.com/190)
 
