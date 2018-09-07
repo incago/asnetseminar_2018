@@ -12,7 +12,7 @@
 
 # Anti Perttern?
 
-- [안티패턴](https://ko.wikipedia.org/wiki/%EC%95%88%ED%8B%B0%ED%8C%A8%ED%84%B4);
+- [안티패턴](https://ko.wikipedia.org/wiki/%EC%95%88%ED%8B%B0%ED%8C%A8%ED%84%B4)
 - [자바스크립트 안티패턴과 개선방법](https://github.com/nhnent/fe.javascript/wiki/%EC%95%88%ED%8B%B0-%ED%8C%A8%ED%84%B4)
 
 # Design Better
