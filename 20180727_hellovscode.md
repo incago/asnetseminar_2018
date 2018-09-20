@@ -1,4 +1,4 @@
-# hello vscode
+# Hello vscode
 
 ## Visual Studio Code(이하 VS Code)란 무엇인가
 

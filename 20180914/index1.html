@@ -44,7 +44,7 @@
             { className: "container" },
             "Hello World"
             );
-        */
+            */
         //with JSX
         const content = 'Hello World!!';
         const myClassName = 'container';
@@ -52,9 +52,11 @@
             className: 'container',
             children: 'Hello World',
         }
-        //const element = <div className={myClassName + '_incago'}>{content} {3+4} 3+4</div>;
-        const element = <div {...props} className="override-class"/>;
-        //const element = <div {...props} className="override-class"> Hi There</div>;
+        /*
+        */
+        //const element = <div className={myClassName + '_incago'}>Hello Junghyun {3+4} 3+4</div>;
+        //const element = <div className="override-class" {...props}/>;
+        const element = <div {...props} className="override-class"> Hi There</div>;
 
         ReactDOM.render(element, rootElement);
     </script>

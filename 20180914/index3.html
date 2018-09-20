@@ -26,9 +26,9 @@
 
         SayHello.propTypes = {
             firstName: PropTypes.string.isRequired,
-            lastName: PropTypes.string.isRequired,
+            lastName: PropTypes.string,
         }
-        ReactDOM.render(<SayHello firstName={true} lastName={3} />, rootElement);
+        ReactDOM.render(<SayHello firstName='Junhak' />, rootElement);
     </script>
 </body>
 

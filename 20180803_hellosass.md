@@ -1,4 +1,4 @@
-# hello Sass
+# Hello Sass
 
 ## Sass 가 뭐죠?
 
