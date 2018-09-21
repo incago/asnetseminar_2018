@@ -9,10 +9,34 @@
 </head>
 
 <body>
-
+    <div id="app">
+        <ul>
+            <li v-for="product in products">{{ product }}</li>
+        </ul>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+            data: {
+                products: []
+            },
+            created() {
+                var that = this;
+                console.log('created');
+                fetch('https://api.myjson.com/bins/74l63')
+                    .then(function (response) {
+                        console.log(response);
+                        var json = response.json();
+                        console.log(json);
+                        return json;
+                    })
+                    .then(function (json) {
+                        that.products = json.products;
+                    })
 
+            }
+        })
 
 
     </script>
