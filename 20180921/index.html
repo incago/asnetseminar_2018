@@ -9,32 +9,31 @@
 </head>
 
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="product in products">{{ product }}</li>
-        </ul>
+    <div id="app-5">
+        {{ message }}
+        <hr>
+        {{ reverseMessage() }}
+        <hr>
+        {{ computedReverseMessage }}
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script type="text/javascript">
-        const app = new Vue({
-            el: '#app',
-            data: {
-                products: []
-            },
-            created() {
-                var that = this;
-                console.log('created');
-                fetch('https://api.myjson.com/bins/74l63')
-                    .then(function (response) {
-                        console.log(response);
-                        var json = response.json();
-                        console.log(json);
-                        return json;
-                    })
-                    .then(function (json) {
-                        that.products = json.products;
-                    })
 
+        var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: '안녕하세요! Vue.js!'
+            },
+            methods: {
+                reverseMessage: function () {
+                    return this.message.split('').reverse().join('');
+                }
+            },
+            computed: {
+                computedReverseMessage: function () {
+                    return this.message.split('').reverse().join('');
+                }
             }
         })
 
