@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 - Data Driven Documents</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+            padding-left: 100px;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;
+            margin-right: 2px;
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div#box_$*5 -->
+    <script type="text/javascript">
+        var dataset = [5, 10, 15, 20, 25];
+
+        d3.select('body')
+            .selectAll('div')
+            .data(dataset)
+            .enter()
+            .append('div')
+            .attr('class', 'bar')
+            //.style('height', '30px');
+            .style('height', function (d) {
+                return d * 5 + 'px';
+            });
+
+    </script>
+</body>
+
+</html>

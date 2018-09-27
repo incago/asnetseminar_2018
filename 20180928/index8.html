@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 - Data Driven Documents</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+            padding-left: 100px;
+        }
+
+        .bar {
+            display: inline-block;
+            margin-right: 2px;
+            /*background-color: teal;*/
+            /*fill: teal;*/
+        }
+
+        #chartArea {
+            background-color: #ccc;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chartArea"></div>
+    <script type="text/javascript">
+        //var dataset = [5, 10, 15, 20, 25];
+        var dataset = _.map(_.range(50), function (i) {
+            return Math.random() * 100;
+        });
+        var margin = { top: 20, right: 20, bottom: 20, left: 20 };
+        var w = 400 - margin.left - margin.right,
+            h = 300 - margin.top - margin.bottom;
+
+        var svg = d3.select('#chartArea').append('svg')
+            .attr('width', w + margin.left + margin.right)
+            .attr('height', h + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+
+        var xScale = d3.scaleBand()
+            .domain(dataset)
+            .range([0, w])
+            .paddingInner(0.1)
+            .paddingOuter(0.3);
+
+        var yScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset) * 1.1])
+            .range([0, h]);
+
+        var colorScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset)])
+            .range(['yellow', 'green']);
+
+        svg.selectAll('rect')
+            .data(dataset)
+            .enter()
+            .append('rect')
+            .attr('class', 'bar')
+            .attr('x', function (d, i) {
+                return xScale(d);
+            })
+            .attr('y', function (d) {
+                return h - yScale(d);
+            })
+            .attr('width', xScale.bandwidth())
+            .attr('height', function (d) {
+                return yScale(d);
+            })
+            .attr('fill', function (d, i) {
+                return colorScale(d);
+            });
+    </script>
+</body>
+
+</html>
